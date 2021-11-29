@@ -37,6 +37,12 @@ Route::get('/supplier',function (){
 Route::get('/suppliers',function (){
     return view('admins.supplies.supplieslist');
 });
+Route::get('/category',function (){
+    return view('admins.medicine.category');
+});
+Route::get('/categories',function (){
+    return view('admins.medicine.categorylist');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
