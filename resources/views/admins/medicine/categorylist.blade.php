@@ -19,7 +19,7 @@
                                 <a href="#" class="btn btn-outline-info">Export PDF</a>
                                 <a href="#" class="btn btn-outline-info">Export Excel</a>
                                 <a href="#" class="btn btn-outline-info">Printed</a>
-                                <a href="{{asset('/customer')}}" class="btn btn-outline-primary">Add Customer</a>
+                                <a href="{{asset('/customer')}}" class="btn btn-outline-primary">Add Category</a>
                             </div>
                             <table class="table table-bordered">
                                 <thead>
