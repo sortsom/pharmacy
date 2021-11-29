@@ -37,11 +37,11 @@ Route::get('/supplier',function (){
 Route::get('/suppliers',function (){
     return view('admins.supplies.supplieslist');
 });
-Route::get('/order',function (){
-    return view('admins.orders.order');
+Route::get('/category',function (){
+    return view('admins.medicine.category');
 });
-Route::get('/orderd',function (){
-    return view('admins.orders.orderdetail');
+Route::get('/categories',function (){
+    return view('admins.medicine.categorylist');
 });
 Auth::routes();
 
