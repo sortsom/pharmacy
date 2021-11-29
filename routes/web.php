@@ -37,6 +37,12 @@ Route::get('/supplier',function (){
 Route::get('/suppliers',function (){
     return view('admins.supplies.supplieslist');
 });
+Route::get('/order',function (){
+    return view('admins.orders.order');
+});
+Route::get('/orderd',function (){
+    return view('admins.orders.orderdetail');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

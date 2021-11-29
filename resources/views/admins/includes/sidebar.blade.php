@@ -1,3 +1,9 @@
+<!-- Brand Logo -->
+<a href="#" class="brand-link">
+    <img src="{{asset('admins/dist/img/logo-1.jpg')}}" alt="Pharmacy" class="brand-image img-circle " style="opacity: .8">
+    <span class="brand-text font-weight-light">Pharmacy Angkor</span>
+</a>
+<!-- Sidebar -->
 <div class="sidebar">
     <!-- Sidebar Menu -->
     <nav class="mt-2">
@@ -247,9 +253,15 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{asset('/order')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>add orders</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{asset('/orderd')}}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Orders Details</p>
                         </a>
                     </li>
                 </ul>

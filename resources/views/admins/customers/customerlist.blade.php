@@ -24,7 +24,7 @@
                             <table class="table table-bordered">
                                 <thead>
                                 <tr>
-                                    <th scope="col">Code</th>
+                                    <th>CustomerCode</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Gender</th>
                                     <th scope="col">Phone</th>

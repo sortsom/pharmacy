@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="ml-lg-5">Customers</h1>
+                    <h1 class="col">Customers</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -12,7 +12,7 @@
                         <li class="breadcrumb-item active">Dashboard admins</li>
                     </ol>
                 </div><!-- /.col -->
-                <div class="container">
+                <div class="container-fluid mt-4">
                     <div class="card">
                         <div class="card-head py-2">
                             <div class="container p-5">
@@ -62,13 +62,12 @@
                                             <input type="text" class="form-control" placeholder="Customer Address" aria-label="Username" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="modal-footer">
                                 <a href="#" class="btn btn-secondary">Back</a>
                                 <a href="{{asset('/customers')}}" class="btn btn-outline-primary">Save add</a>
-                                {{--                                <button type="submit" class="btn btn-primary">Save Add</button>--}}
+                                {{--<button type="submit" class="btn btn-primary">Save Add</button>--}}
                             </div>
                         </div>
                     </div>

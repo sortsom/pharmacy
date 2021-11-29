@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="ml-lg-5">Employees</h1>
+                    <h1 class="col">Employees</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -12,7 +12,7 @@
                         <li class="breadcrumb-item">Dashboard admins</li>
                     </ol>
                 </div><!-- /.col -->
-                <div class="container">
+                <div class="container-fluid mt-4">
                     <div class="card">
                         <div class="card-head py-2">
                            <div class="container p-5">
