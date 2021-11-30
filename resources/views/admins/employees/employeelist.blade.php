@@ -19,7 +19,7 @@
                                 <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Export PDF</a>
                                 <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Export Excel</a>
                                 <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Printed</a>
-                                <a href="{{asset('/supplier')}}" class="btn btn-outline-primary float-right btn-sm ml-1">Add Supplies</a>
+                                <a href="{{route('/supplier')}}" class="btn btn-outline-primary float-right btn-sm ml-1">Add Supplies</a>
                                 <div class="clearfix"></div>
                             </div>
                                 <table class="table table-bordered">
