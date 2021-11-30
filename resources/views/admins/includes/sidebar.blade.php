@@ -99,7 +99,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="supplier" class="nav-link">
+                        <a href="{{route('/supplier')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>add Supplies</p>
                         </a>
