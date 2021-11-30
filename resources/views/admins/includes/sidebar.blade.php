@@ -40,13 +40,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{asset('/employee')}}" class="nav-link">
+                        <a href="{{route('/employee')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>add employees</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('/employees')}}" class="nav-link">
+                        <a href="{{route('/employees')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Employees List</p>
                         </a>
@@ -60,13 +60,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{asset('/customer')}}" class="nav-link">
+                        <a href="{{route('/customer')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Add Customer</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('/customers')}}" class="nav-link">
+                        <a href="{{route('/customers')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Customer List</p>
                         </a>
@@ -105,7 +105,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('/suppliers')}}" class="nav-link">
+                        <a href="{{route('/suppliers')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Supplies List</p>
                         </a>
@@ -125,13 +125,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{asset('/category')}}" class="nav-link">
+                        <a href="{{route('/category')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Add Category</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('/categories')}}" class="nav-link">
+                        <a href="{{route('/categories')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Category List</p>
                         </a>
@@ -235,7 +235,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="{{asset('/product')}}" class="nav-link">
+                <a href="{{route('/product')}}" class="nav-link">
                     <i class="nav-icon fas fa-ambulance"></i>
                     <p>Products</p>
                 </a>
@@ -253,13 +253,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{asset('/order')}}" class="nav-link">
+                        <a href="{{route('/order')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>add orders</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('/orderd')}}" class="nav-link">
+                        <a href="{{route('/orderd')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Orders Details</p>
                         </a>
