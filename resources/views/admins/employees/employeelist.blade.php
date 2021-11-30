@@ -12,15 +12,16 @@
                         <li class="breadcrumb-item active">Employee List</li>
                     </ol>
                 </div><!-- /.col -->
-                <div class="container-fluid">
+                <div class="container-fluid mt-4">
                         <div class="card">
                             <div class="card-header">
-                                <div class="modal-footer">
-                                    <a href="#" class="btn btn-outline-info">Import PDF</a>
-                                    <a href="#" class="btn btn-outline-info">Import Excel</a>
-                                    <a href="#" class="btn btn-outline-info">Printed</a>
-                                    <a href="{{asset('/employee')}}" class="btn btn-outline-primary">Add employee</a>
-                                </div>
+                                <span class="">Supplies List</span>
+                                <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Export PDF</a>
+                                <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Export Excel</a>
+                                <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Printed</a>
+                                <a href="{{asset('/supplier')}}" class="btn btn-outline-primary float-right btn-sm ml-1">Add Supplies</a>
+                                <div class="clearfix"></div>
+                            </div>
                                 <table class="table table-bordered">
                                     <thead>
                                     <tr>
@@ -90,10 +91,14 @@
                                         <td>@mdo</td>
                                         <td>@mdo</td>
                                     </tr>
+                                    <tr>
+                                        <td colspan="11" class="text-center">
+                                            No data to be displayed
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
-                        </div>
-                    </div>
+                         </div>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->

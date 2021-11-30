@@ -42,11 +42,33 @@
 <script src="{{asset('admins/plugins/summernote/summernote-bs4.min.js')}}"></script>
 <!-- overlayScrollbars -->
 <script src="{{asset('admins/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
-<!-- AdminLTE App -->
+<!--  App -->
 <script src="{{asset('admins/dist/js/adminlte.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
+<!--  for demo purposes -->
 <script src="{{asset('admins/dist/js/demo.js')}}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<!--  dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('admins/dist/js/pages/dashboard.js')}}"></script>
+<!--data table -->
+<script src="{{asset('https://code.jquery.com/jquery-3.5.1.js')}}"></script>
+<script src="{{asset('https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js')}}"></script>
+<script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js')}}"></script>
+<script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js')}}"></script>
+<script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js')}}"></script>
+<script src="{{asset('https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js')}}"></script>
+<script src="{{asset('https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js')}}"></script>
+<!--table rule-->
+
+<script>
+    $(document).ready(function() {
+        $('#orderlist').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        } );
+    } );
+</script>
+
 </body>
 </html>
