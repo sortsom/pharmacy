@@ -49,6 +49,9 @@ Route::get('/unit',function (){
 Route::get('/units',function (){
     return view('admins.medicine.unitlist');
 });
+Route::get('/medicine',function (){
+    return view('admins.medicine.medicine');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
