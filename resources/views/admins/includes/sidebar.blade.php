@@ -119,6 +119,18 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Add Medicine</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Medicine List</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{asset('/category')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Add Category</p>
@@ -131,29 +143,18 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="unit" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Add Unit</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="units" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Unit List</p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Add Medicine</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Medicine List</p>
-                        </a>
-                    </li>
+
                 </ul>
             </li>
             <li class="nav-item">
