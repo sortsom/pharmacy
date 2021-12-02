@@ -40,13 +40,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{route('/employee')}}" class="nav-link">
+                        <a href="{{asset('/employee')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>add employees</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('/employees')}}" class="nav-link">
+                        <a href="{{asset('/employees')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Employees List</p>
                         </a>
@@ -60,13 +60,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{route('/customer')}}" class="nav-link">
+                        <a href="{{asset('/customer')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Add Customer</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('/customers')}}" class="nav-link">
+                        <a href="{{asset('/customers')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Customer List</p>
                         </a>
@@ -99,13 +99,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{route('/supplier')}}" class="nav-link">
+                        <a href="supplier" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>add Supplies</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('/suppliers')}}" class="nav-link">
+                        <a href="{{asset('/suppliers')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Supplies List</p>
                         </a>
@@ -125,31 +125,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{route('/category')}}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Add Category</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{route('/categories')}}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Category List</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Add Unit</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Unit List</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="medicine" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Add Medicine</p>
                         </a>
@@ -160,6 +136,31 @@
                             <p>Medicine List</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{asset('/category')}}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Add Category</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{asset('/categories')}}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Category List</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="unit" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Add Unit</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="units" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Unit List</p>
+                        </a>
+                    </li>
+
                 </ul>
             </li>
             <li class="nav-item">
@@ -235,7 +236,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="{{route('/product')}}" class="nav-link">
+                <a href="{{asset('/product')}}" class="nav-link">
                     <i class="nav-icon fas fa-ambulance"></i>
                     <p>Products</p>
                 </a>
@@ -253,13 +254,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{route('/order')}}" class="nav-link">
+                        <a href="{{asset('/order')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>add orders</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('/orderd')}}" class="nav-link">
+                        <a href="{{asset('/orderd')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Orders Details</p>
                         </a>

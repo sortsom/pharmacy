@@ -43,6 +43,15 @@ Route::get('/category',function (){
 Route::get('/categories',function (){
     return view('admins.medicine.categorylist');
 });
+Route::get('/unit',function (){
+    return view('admins.medicine.unit');
+});
+Route::get('/units',function (){
+    return view('admins.medicine.unitlist');
+});
+Route::get('/medicine',function (){
+    return view('admins.medicine.medicine');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
