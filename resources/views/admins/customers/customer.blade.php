@@ -36,7 +36,7 @@
                                     <div class="col-md-6">
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
-                                                <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+                                                <span class="input-group-text" for="inputGroupSelect01">Gender</span>
                                             </div>
                                             <select class="custom-select" id="inputGroupSelect01">
                                                 <option selected>Choose...</option>

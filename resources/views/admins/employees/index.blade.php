@@ -19,7 +19,7 @@
                                 <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Export PDF</a>
                                 <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Export Excel</a>
                                 <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Printed</a>
-                                <a href="{{route('/supplier')}}" class="btn btn-outline-primary float-right btn-sm ml-1">Add Supplies</a>
+                                <a href="{{route('/employee')}}" class="btn btn-outline-primary float-right btn-sm ml-1">Add Supplies</a>
                                 <div class="clearfix"></div>
                             </div>
                                 <table class="table table-bordered">
@@ -39,8 +39,9 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach($employees as $employee)
                                     <tr>
-                                        <th scope="row">1</th>
+                                        <th scope="row">{{$employee->name}}</th>
                                         <td><img src="{{asset('admins/dist/img/logo-1.jpg')}}" alt="Pharmacy" class=" img-circle " style=" width: 50px;height:50px;"></td>
                                         <td>Otto</td>
                                         <td>@mdo</td>
@@ -96,6 +97,7 @@
                                             No data to be displayed
                                         </td>
                                     </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                          </div>

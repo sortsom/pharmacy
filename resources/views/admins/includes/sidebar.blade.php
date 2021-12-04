@@ -11,16 +11,13 @@
             <!-- Add icons to the links using the .nav-icon class
                  with font-awesome or any other icon font library -->
             <li class="nav-item menu-open">
-                <a href="#" class="nav-link active">
+                <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
-                    <p>
-                        Dashboard
-                        <i class="right fas fa-angle-left"></i>
-                    </p>
+                    <p>Dashboard<i class="right fas fa-angle-left"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">
+                        <a href="#" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Dashboard Admin</p>
                         </a>
@@ -99,7 +96,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="supplier" class="nav-link">
+                        <a href="{{asset('supplier')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>add Supplies</p>
                         </a>
@@ -125,7 +122,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="medicine" class="nav-link">
+                        <a href="{{asset('/medicine')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Add Medicine</p>
                         </a>
@@ -149,13 +146,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="unit" class="nav-link">
+                        <a href="{{asset('unit')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Add Unit</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="units" class="nav-link">
+                        <a href="{{asset('units')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Unit List</p>
                         </a>
@@ -190,7 +187,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{asset('/invoice')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>add Invoice</p>
                         </a>
@@ -202,7 +199,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{asset('/invoiced')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Invoice List</p>
                         </a>
@@ -260,7 +257,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('/orderd')}}" class="nav-link">
+                        <a href="{{asset('/ordered')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Orders Details</p>
                         </a>

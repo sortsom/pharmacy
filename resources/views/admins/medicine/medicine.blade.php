@@ -12,7 +12,7 @@
                         <li class="breadcrumb-item active">Add Medicine</li>
                     </ol>
                 </div><!-- /.col -->
-                <div class="container">
+                <div class="container-fluid">
                     <div class="card">
                         <div class="card-head py-2">
                             <div class="container p-5">
@@ -22,7 +22,8 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon1">Barcode</span>
                                             </div>
-                                            <input type="text" class="form-control" placeholder="product code" aria-label="#" ria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="product code" aria-label="#"
+                                                   aria-describedby="basic-addon1">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
