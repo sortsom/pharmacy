@@ -44,8 +44,18 @@ class EmployeeController extends Controller
     {
         Employee::create([
             'name'=>$request->name,
+            'gender'=>$request->gender,
+            'date'=>$request->date,
+            'idcard'=>$request->idcard,
+            'hiredate'=>$request->hiredate,
+            'position'=>$request->graduate,
+            'salary'=>$request->salary,
+            'address'=>$request->address,
+            'phone'=>$request->phone,
+            'images'=>$request->images,
+
         ]);
-        return redirect()->route('admin.employees.index');
+     return redirect()->route('admin.employees.index');
     }
 
     /**
