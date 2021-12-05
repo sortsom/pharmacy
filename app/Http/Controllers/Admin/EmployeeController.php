@@ -20,7 +20,7 @@ class EmployeeController extends Controller
     public function index()
     {
         $employees =Employee::all();
-        return view('employees.index',['employees'=>$employees]);
+        return view('admin.employees.index',['employees'=>$employees]);
 
     }
 
@@ -31,7 +31,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-      return view('employees.create');
+      return view('admin.employees.create');
     }
 
     /**
@@ -45,7 +45,7 @@ class EmployeeController extends Controller
         Employee::create([
             'name'=>$request->name,
         ]);
-        return redirect()->route('employees.index');
+        return redirect()->route('admin.employees.index');
     }
 
     /**
@@ -57,7 +57,7 @@ class EmployeeController extends Controller
     public function show($id)
     {
     $employees =Employee::findOrFail($id);
-    return view('employees.show',['employee'=>$employees]);
+    return view('admin.employees.show',['employee'=>$employees]);
 
     }
 

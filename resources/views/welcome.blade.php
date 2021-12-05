@@ -1,8 +1,8 @@
-@include('admins.includes.head')
+@include('admin.includes.head')
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
     <!-- Navbar -->
-    @include('admins.includes.sidebar')
+    @include('admin.includes.sidebar')
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
@@ -243,4 +243,4 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    @include('admins.includes.fooder')
+    @include('admin.includes.fooder')

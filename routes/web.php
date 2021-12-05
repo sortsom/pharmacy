@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admins.home');
+    return view('admin.home');
 });
-Route::group(['prefix' => 'admin', 'as' => 'admins.employees'],function (){
+Route::group(['prefix' => 'admin', 'as' => 'admin.'],function (){
     Route::resource('employees', EmployeeController::class);
 });
 
