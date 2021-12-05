@@ -37,7 +37,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{asset('/employee')}}" class="nav-link">
+                        <a href="{{route('employees.index')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>add employees</p>
                         </a>

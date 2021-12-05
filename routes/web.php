@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\EmployeeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('admins.home');
 });
-Route::group(['middleware'=>['admins']],function (){
-    Route::resource('employee',\App\Http\Controllers\Admin\EmployeeController::class);
-
+Route::group(['prefix' => 'admin', 'as' => 'admin:'],function (){
+    Route::resource('employees', EmployeeController::class);
 });
 
 Auth::routes();
