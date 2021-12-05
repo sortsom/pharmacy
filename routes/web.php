@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('admins.home');
 });
-Route::group(['prefix' => 'admin', 'as' => 'admin:'],function (){
+Route::group(['prefix' => 'admin', 'as' => 'admins.employees'],function (){
     Route::resource('employees', EmployeeController::class);
 });
 
