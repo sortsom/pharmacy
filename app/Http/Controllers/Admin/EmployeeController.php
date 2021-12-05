@@ -55,19 +55,19 @@ class EmployeeController extends Controller
             'images'=>$request->images,
 
         ]);
-     return redirect()->route('admin.employees.index');
+     return redirect()->route('admin.employees.create');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return Application|Factory|View|\Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
-    $employees =Employee::findOrFail($id);
-    return view('admin.employees.show',['employee'=>$employees]);
+//    $employees =Employee::findOrFail($id);
+//    return view('admin.employees.show',['employee'=>$employees]);
 
     }
 
