@@ -51,8 +51,13 @@
                                         <td>{{$employee->salary}}</td>
                                         <td>{{$employee->phone}}</td>
                                         <td>{{$employee->address}}</td>
-                                        <td>
-
+                                        <td class="d-flex">
+                                            <a href="{{route('admin.employees.edit',$employee->id)}}" class="btn btn-outline-success">Edit</a>
+                                            <form method="POST" action="{{route('admin.employees.destroy',$employee->id)}}" class="d-inline-flex">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-outline-danger">delete</button>
+                                            </form>
                                         </td>
                                     </tr>
                                     @empty

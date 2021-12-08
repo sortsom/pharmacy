@@ -77,12 +77,12 @@ class EmployeeController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param int $id
-     * @return Response
+     * @return Application|Factory|View|Response
      */
-    public function edit(int $id): Response
+    public function edit(int $id)
     {
-//        $employees=Employee::findOrFail($id);
-//        return view('employees.edit',['Employee'=>$employees]);
+        $employees=Employee::findOrFail($id);
+        return view('admin.employees.edit',['Employee'=>$employees]);
     }
 
     /**
@@ -90,11 +90,18 @@ class EmployeeController extends Controller
      *
      * @param Request $request
      * @param  int  $id
-     * @return Response
+     * @return RedirectResponse
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = [
+            'name' => $request->name,
+            'gender' => $request->gender,
+            'date_start' => $request->date_start,
+        ];
+        $employees = Employee::findOrFail($id);
+        $employees->update($data);
+        return redirect()->route('admin.employees.index')->with('success', 'Updated');
     }
 
     /**
@@ -105,6 +112,8 @@ class EmployeeController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $employees=Employee::findOrFail($id);
+       $employees->Delete();
+       return redirect()->route('admin.employees.index')->with("Success",'You Delete successful!!');
     }
 }
