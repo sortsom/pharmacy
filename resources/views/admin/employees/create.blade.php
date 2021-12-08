@@ -17,6 +17,7 @@
                         <div class="card-head py-2">
                            <div class="container p-5">
                                <form action="{{route('admin.employees.store')}}" method="POST" enctype="multipart/form-data">
+                                   @csrf
                                <div class="row">
                                    <div class="col-md-6">
                                        <div class="input-group mb-3">
@@ -31,7 +32,7 @@
                                           <div class="input-group-prepend">
                                               <span class="input-group-text" for="gender">Gender</span>
                                           </div>
-                                          <label for="gender"></label><select class="custom-select" id="gender">
+                                         <select class="custom-select" id="gender" name="gender">
                                               <option selected>Choose...</option>
                                               <option value="1">Male</option>
                                               <option value="2">Female</option>
@@ -52,14 +53,14 @@
                                            <div class="input-group-prepend">
                                                <span class="input-group-text" id="DateBirth">DateBirth</span>
                                            </div>
-                                           <input type="date" name="date" class="form-control" placeholder="DateBirth" aria-label="DateBirth" aria-describedby="basic-addon1">
+                                           <input type="date" name="date_start" class="form-control" placeholder="DateBirth" aria-label="DateBirth" aria-describedby="basic-addon1">
                                        </div>
                                    </div><div class="col-md-6">
                                        <div class="input-group mb-3">
                                            <div class="input-group-prepend">
                                                <span class="input-group-text" id="hiredate">hiredate</span>
                                            </div>
-                                           <input type="text" name="hiredate" class="form-control" placeholder="hiredate" aria-label="hiredate" aria-describedby="basic-addon1">
+                                           <input type="date" name="date_end" class="form-control" placeholder="hiredate" aria-label="hiredate" aria-describedby="basic-addon1">
                                        </div>
                                    </div>
                                    <div class="col-md-6">
@@ -67,7 +68,7 @@
                                            <div class="input-group-prepend">
                                                <span class="input-group-text" for="Position">Position</span>
                                            </div>
-                                           <label for="position"></label><select class="custom-select" id="position">
+                                           <select class="custom-select" id="position" name="position">
                                                <option selected>Choose...</option>
                                                <option value="1">One</option>
                                                <option value="2">Two</option>
@@ -127,6 +128,7 @@
                     </div>
                 </div>
             </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+        </div></div><!-- /.container-fluid -->
+    </div>
     </div>
 @endsection

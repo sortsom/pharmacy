@@ -39,68 +39,38 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-
+                                    @forelse($employees as $employee)
                                     <tr>
-                                        <th scope="row">១</th>
+                                        <th scope="row">{{$employee->id}}</th>
                                         <td><img src="{{asset('admins/dist/img/logo-1.jpg')}}" alt="Pharmacy" class=" img-circle " style=" width: 50px;height:50px;"></td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td>{{$employee->name}}</td>
+                                        <td>{{$employee->gender}}</td>
+                                        <td>{{$employee->position}}</td>
+                                        <td>{{$employee->idcard}}</td>
+                                        <td>{{$employee->graduate}}</td>
+                                        <td>{{$employee->salary}}</td>
+                                        <td>{{$employee->phone}}</td>
+                                        <td>{{$employee->address}}</td>
                                         <td>
 
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>@mdo</td>
-                                    </tr> <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>@mdo</td>
-                                    </tr> <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>@mdo</td>
-                                    </tr>
+                                    @empty
                                     <tr>
                                         <td colspan="11" class="text-center">
                                             No data to be displayed
                                         </td>
                                     </tr>
-
+                                    @endforelse
                                     </tbody>
                                 </table>
+                                <div class="card-foot">
+                                    <div class="d-flex justify-content-lg-end">
+                                        {{$employees->links('pagination::bootstrap-4')}}
+                                    </div>
+                                </div>
                          </div>
+
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->

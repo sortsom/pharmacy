@@ -11,5 +11,5 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     use HasFactory;
-    protected  $fillable=['name','gender','date','idcard','hiredate','position','graduate','salary','phone','address','images'];
+    protected  $fillable=['name','gender','date_start','idcard','date_end','graduate','position','salary','phone','address','images'];
 }

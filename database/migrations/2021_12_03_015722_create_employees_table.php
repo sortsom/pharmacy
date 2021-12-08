@@ -17,9 +17,9 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->String('name');
             $table->String('gender');
-            $table->date('date');
+            $table->date('date_start');
             $table->String('idcard');
-            $table->dateTime('hiredate');
+            $table->date('date_end');
             $table->String('position');
             $table->String('graduate');
             $table->integer('salary');

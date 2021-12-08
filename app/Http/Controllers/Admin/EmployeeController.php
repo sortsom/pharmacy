@@ -9,6 +9,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class EmployeeController extends Controller
 {
@@ -19,8 +20,9 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees =Employee::all();
-        return view('admin.employees.index',['employees'=>$employees]);
+        $employees=Employee::paginate(5);
+        return view('admin.employees.index', ['employees' => $employees]);
+
 
     }
 
@@ -45,24 +47,24 @@ class EmployeeController extends Controller
         Employee::create([
             'name'=>$request->name,
             'gender'=>$request->gender,
-            'date'=>$request->date,
+            'date_start'=>$request->date_start,
             'idcard'=>$request->idcard,
-            'hiredate'=>$request->hiredate,
-            'position'=>$request->graduate,
+            'date_end'=>$request->date_end,
+            'position'=>$request->position,
+            'graduate'=>$request->graduate,
             'salary'=>$request->salary,
             'address'=>$request->address,
             'phone'=>$request->phone,
             'images'=>$request->images,
-
         ]);
-     return redirect()->route('admin.employees.create');
+     return  redirect()->route('admin.employees.index');
     }
 
     /**
      * Display the specified resource.
      *
      * @param int $id
-     * @return Application|Factory|View|\Illuminate\Http\Response
+     * @return void
      */
     public function show(int $id)
     {
@@ -74,10 +76,10 @@ class EmployeeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return Response
      */
-    public function edit($id)
+    public function edit(int $id): Response
     {
 //        $employees=Employee::findOrFail($id);
 //        return view('employees.edit',['Employee'=>$employees]);
@@ -88,7 +90,7 @@ class EmployeeController extends Controller
      *
      * @param Request $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, $id)
     {
@@ -99,7 +101,7 @@ class EmployeeController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {
