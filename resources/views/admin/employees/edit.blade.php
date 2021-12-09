@@ -16,7 +16,7 @@
                     <div class="card">
                         <div class="card-head py-2">
                             <div class="container p-5">
-                                <form action="{{route('admin.employees.update',$employee->id)}}" method="POST" enctype="multipart/form-data">
+                                <form action="{{route('admin.employees.update',$employees->id)}}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
                                     <div class="row">
@@ -94,7 +94,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="salary">Salary</span>
                                                 </div>
-                                                <input type="text" name="salary" class="form-control" placeholder="Salary" aria-label="Salary" aria-describedby="basic-addon1">
+                                                <input type="number" name="salary" class="form-control" placeholder="Salary" aria-label="Salary" aria-describedby="basic-addon1">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -119,7 +119,7 @@
                                                     <span class="input-group-text">Image</span>
                                                 </div>
                                                 <div class="custom-file">
-                                                    <input type="file" name="images" class="custom-file-input" id="img">
+                                                    <input type="file" name="image" class="custom-file-input" id="img">
                                                     <label class="custom-file-label" for="img">Choose file</label>
                                                 </div>
                                             </div>
@@ -134,6 +134,7 @@
                         </div>
                     </div><!-- /.row -->
                 </div></div><!-- /.container-fluid -->
+        </div></div>
         </div>
     </div>
 @endsection

@@ -25,7 +25,7 @@ class CreateEmployeesTable extends Migration
             $table->integer('salary');
             $table->text('address');
             $table->text('phone');
-            $table->String('images')->nullable();;
+            $table->String('image')->nullable();;
             $table->timestamps();
 
         });

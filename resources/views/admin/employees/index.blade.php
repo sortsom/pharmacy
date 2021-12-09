@@ -42,22 +42,28 @@
                                     @forelse($employees as $employee)
                                     <tr>
                                         <th scope="row">{{$employee->id}}</th>
-                                        <td><img src="{{asset('admins/dist/img/logo-1.jpg')}}" alt="Pharmacy" class=" img-circle " style=" width: 50px;height:50px;"></td>
+                                        <td>
+                                            @if(!empty(trim($employee->image)))
+                                                <img style="height: 45px; width: 45px;  border-radius: 50%" alt="image" src={{ asset('image/' . $employee->image) }}>
+                                            @else
+                                                <img style="height: 45px; width: 45px; border-radius: 50%" alt="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/495px-No-Image-Placeholder.svg.png">
+                                            @endif
+                                        </td>
                                         <td>{{$employee->name}}</td>
                                         <td>{{$employee->gender}}</td>
                                         <td>{{$employee->position}}</td>
                                         <td>{{$employee->idcard}}</td>
                                         <td>{{$employee->graduate}}</td>
-                                        <td>{{$employee->salary}}</td>
+                                        <td>{{$employee->salary}}$</td>
                                         <td>{{$employee->phone}}</td>
                                         <td>{{$employee->address}}</td>
                                         <td class="d-flex">
-                                            <a class="btn btn-info" href="{{ route('admin.employees.show',$employee->id) }}">Show</a>
-                                            <a href="{{route('admin.employees.edit',$employee->id)}}" class="btn btn-outline-success">Edit</a>
+                                            <a class="ml-2 btn btn-outline-dark" href="{{ route('admin.employees.show',$employee->id) }}"><i class="far fa-eye"></i></a>
+                                            <a href="{{route('admin.employees.edit',$employee->id)}}" class="ml-2 btn btn-outline-primary"><i class="fas fa-edit"></i></a>
                                             <form method="POST" action="{{route('admin.employees.destroy',$employee->id)}}" class="d-inline-flex">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-outline-danger">delete</button>
+                                                <button type="submit" class="ml-2 btn btn-outline-danger"><i class="far fa-trash-alt"></i></button>
                                             </form>
                                         </td>
                                     </tr>

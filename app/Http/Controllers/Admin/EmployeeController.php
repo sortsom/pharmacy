@@ -82,7 +82,7 @@ class EmployeeController extends Controller
     public function edit($id)
     {
         $employees=Employee::findOrFail($id);
-       return view('admin.employees.edit',['employees'=>$employees]);
+        return view('admin.employees.edit', ['employees' => $employees]);
 
     }
 
@@ -93,16 +93,21 @@ class EmployeeController extends Controller
      * @param int $id
      * @return RedirectResponse
      */
-    public function update(Request $request, Employee $id): RedirectResponse
+    public function update(Request $request,$id): RedirectResponse
     {
         $data = [
             'name' => $request->name,
             'gender' => $request->gender,
             'date_start' => $request->date_start,
         ];
+        if ($request->file('image')) {
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('image'), $imageName);
+            $data['image'] = $imageName;
+        }
         $employees = Employee::findOrFail($id);
         $employees->update($data);
-        return redirect()->route('admin.employees.index')->with('success', 'Updated');
+        return redirect()->route('admin.employees.index');
     }
 
     /**
