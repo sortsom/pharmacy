@@ -52,6 +52,7 @@
                                         <td>{{$employee->phone}}</td>
                                         <td>{{$employee->address}}</td>
                                         <td class="d-flex">
+                                            <a class="btn btn-info" href="{{ route('admin.employees.show',$employee->id) }}">Show</a>
                                             <a href="{{route('admin.employees.edit',$employee->id)}}" class="btn btn-outline-success">Edit</a>
                                             <form method="POST" action="{{route('admin.employees.destroy',$employee->id)}}" class="d-inline-flex">
                                                 @csrf

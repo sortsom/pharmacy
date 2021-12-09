@@ -68,31 +68,32 @@ class EmployeeController extends Controller
      */
     public function show(int $id)
     {
-//    $employees =Employee::findOrFail($id);
-//    return view('admin.employees.show',['employee'=>$employees]);
+    $employees =Employee::findOrFail($id);
+    return view('admin.employees.show', ['employees' => $employees]);
 
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param int $id
-     * @return Application|Factory|View|Response
+
+     * @return Application|Factory|View
      */
-    public function edit(int $id)
+    public function edit($id)
     {
         $employees=Employee::findOrFail($id);
-        return view('admin.employees.edit',['Employee'=>$employees]);
+       return view('admin.employees.edit',['employees'=>$employees]);
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param  int  $id
+     * @param int $id
      * @return RedirectResponse
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Employee $id): RedirectResponse
     {
         $data = [
             'name' => $request->name,

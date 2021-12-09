@@ -16,9 +16,6 @@
                     <div class="card">
                         <div class="card-head py-2">
                             <div class="container p-5">
-                                <form action="{{route('admin.employees.update',$employee->id)}}" method="POST" enctype="multipart/form-data">
-                                    @csrf
-                                    @method('PUT')
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="input-group mb-3">
@@ -26,7 +23,7 @@
                                                     <span class="input-group-text" id="basic-addon1">Name</span>
                                                 </div>
                                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
-                                                                                 name="name" value="{{ old('name',$employees->name) }}">
+                                                       name="name" value="{{ $employees->name }}">
                                                 @error('name')
                                                 <span class="text-danger" role="alert">{{ $message }}</span>
                                                 @enderror
@@ -50,7 +47,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="Idcard">Idcard</span>
                                                 </div>
-                                                <input type="text" name="idcard" class="form-control" placeholder="Id card" aria-label="Id card" aria-describedby="basic-addon1">
+                                                <input type="text" name="idcard" class="form-control" placeholder="Id card" aria-label="Id card" aria-describedby="basic-addon1" value="{{ $employees->idcard }}">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -129,8 +126,6 @@
                                         <a href="#" class="btn btn-secondary">Back</a>
                                         <button type="submit" class="btn btn-outline-primary">Save Add</button>
                                     </div>
-                                </form>
-                            </div>
                         </div>
                     </div><!-- /.row -->
                 </div></div><!-- /.container-fluid -->
