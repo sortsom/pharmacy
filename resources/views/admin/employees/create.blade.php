@@ -4,12 +4,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="col">Employees</h1>
+                    <h1 class="col">Add Employee</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item">Employees</li>
+                        <li class="breadcrumb-item">Add Employee</li>
                     </ol>
                 </div><!-- /.col -->
                 <div class="container-fluid mt-4">
@@ -53,14 +53,14 @@
                                            <div class="input-group-prepend">
                                                <span class="input-group-text" id="DateBirth">DateBirth</span>
                                            </div>
-                                           <input type="date" name="date_start" class="form-control" placeholder="DateBirth" aria-label="DateBirth" aria-describedby="basic-addon1">
+                                           <input type="date" name="dob" class="form-control" placeholder="DateBirth" aria-label="DateBirth" aria-describedby="basic-addon1">
                                        </div>
                                    </div><div class="col-md-6">
                                        <div class="input-group mb-3">
                                            <div class="input-group-prepend">
                                                <span class="input-group-text" id="hiredate">hiredate</span>
                                            </div>
-                                           <input type="date" name="date_end" class="form-control" placeholder="hiredate" aria-label="hiredate" aria-describedby="basic-addon1">
+                                           <input type="date" name="date_in"  class="form-control" placeholder="hiredate" aria-label="hiredate" aria-describedby="basic-addon1">
                                        </div>
                                    </div>
                                    <div class="col-md-6">

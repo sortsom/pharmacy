@@ -47,9 +47,9 @@ class EmployeeController extends Controller
         Employee::create([
             'name'=>$request->name,
             'gender'=>$request->gender,
-            'date_start'=>$request->date_start,
+            'dob'=>$request->dob,
             'idcard'=>$request->idcard,
-            'date_end'=>$request->date_end,
+            'date_in'=>$request->date_in,
             'position'=>$request->position,
             'graduate'=>$request->graduate,
             'salary'=>$request->salary,

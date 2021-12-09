@@ -36,9 +36,9 @@
                                                 </div>
                                                 <select class="custom-select" id="gender" name="gender">
                                                     <option selected>Choose...</option>
-                                                    <option value="1">Male</option>
-                                                    <option value="2">Female</option>
-                                                    <option value="3">Others</option>
+                                                    <option value="1" {{$employees->position == 1 ? 'selected' : ''}}>Male</option>
+                                                    <option value="2" {{$employees->position == 2 ? 'selected' : ''}}>Female</option>
+                                                    <option value="3" {{$employees->position == 3 ? 'selected' : ''}}>Others</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -47,7 +47,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="Idcard">Idcard</span>
                                                 </div>
-                                                <input type="text" name="idcard" class="form-control" placeholder="Id card" aria-label="Id card" aria-describedby="basic-addon1" value="{{ $employees->idcard }}">
+                                                <input type="text" name="idcard" value="{{ $employees->idcard }}" class="form-control" placeholder="Id card" aria-label="Id card" aria-describedby="basic-addon1" value="{{ $employees->idcard }}">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -55,7 +55,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="DateBirth">DateBirth</span>
                                                 </div>
-                                                <input type="date" name="date_start" class="form-control" placeholder="DateBirth" aria-label="DateBirth" aria-describedby="basic-addon1">
+                                                <input type="date" name="dob" class="form-control" placeholder="DateBirth" aria-label="DateBirth" aria-describedby="basic-addon1">
                                             </div>
                                         </div><div class="col-md-6">
                                             <div class="input-group mb-3">
@@ -72,9 +72,9 @@
                                                 </div>
                                                 <select class="custom-select" id="position" name="position">
                                                     <option selected>Choose...</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
+                                                    <option value="1" {{$employees->position == 1 ? 'selected' : ''}}>One</option>
+                                                    <option value="2" {{$employees->position == 2 ? 'selected' : ''}}>Two</option>
+                                                    <option value="3" {{$employees->position == 3 ? 'selected' : ''}}>Three</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -83,7 +83,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="graduate">Graduate</span>
                                                 </div>
-                                                <input type="text" name="graduate" class="form-control" placeholder="graduate" aria-label="graduate" aria-describedby="basic-addon1">
+                                                <input type="text" name="graduate" value="{{ $employees->graduate }}" class="form-control" placeholder="graduate" aria-label="graduate" aria-describedby="basic-addon1">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -91,7 +91,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="salary">Salary</span>
                                                 </div>
-                                                <input type="text" name="salary" class="form-control" placeholder="Salary" aria-label="Salary" aria-describedby="basic-addon1">
+                                                <input type="text" name="salary" value="{{ $employees->salary }}" class="form-control" placeholder="Salary" aria-label="Salary" aria-describedby="basic-addon1">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -99,7 +99,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">Phone</span>
                                                 </div>
-                                                <input type="text" name="phone" class="form-control" placeholder="Phone name" aria-label="Phone name" aria-describedby="basic-addon1">
+                                                <input type="text" name="phone" value="{{ $employees->phone }}" class="form-control" placeholder="Phone name" aria-label="Phone name" aria-describedby="basic-addon1">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -107,7 +107,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="address">Address</span>
                                                 </div>
-                                                <input type="text" name="address" class="form-control" placeholder="Address" aria-label="Address" aria-describedby="basic-addon1">
+                                                <input type="text" name="address" value="{{ $employees->address }}" class="form-control" placeholder="Address" aria-label="Address" aria-describedby="basic-addon1">
                                             </div>
                                         </div>
                                         <div class="col-md-12">

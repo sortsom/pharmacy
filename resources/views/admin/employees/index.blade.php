@@ -15,11 +15,11 @@
                 <div class="container-fluid mt-4">
                         <div class="card">
                             <div class="card-header">
-                                <span class="">Supplies List</span>
+                                <span class="">Employee List</span>
                                 <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Export PDF</a>
                                 <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Export Excel</a>
                                 <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Printed</a>
-                                <a href="{{route('admin.employees.create')}}" class="btn btn-outline-primary float-right btn-sm ml-1">Add Supplies</a>
+                                <a href="{{route('admin.employees.create')}}" class="btn btn-outline-primary float-right btn-sm ml-1">Add Employee</a>
                                 <div class="clearfix"></div>
                             </div>
                                 <table class="table table-bordered">
@@ -30,7 +30,7 @@
                                         <th scope="col">Name</th>
                                         <th scope="col">Gender</th>
                                         <th scope="col">Position</th>
-                                        <th scope="col">Idcard</th>
+                                        <th scope="col">ID card</th>
                                         <th scope="col">Graduate</th>
                                         <th scope="col">Salary</th>
                                         <th scope="col">Phone</th>
