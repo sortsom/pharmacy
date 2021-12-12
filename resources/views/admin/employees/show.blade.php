@@ -129,6 +129,7 @@
                         </div>
                     </div><!-- /.row -->
                 </div></div><!-- /.container-fluid -->
+            </div></div></div>
         </div>
     </div>
     </div>
