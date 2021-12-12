@@ -21,6 +21,11 @@ Route::get('/', function () {
 });
 Route::group(['prefix' => 'admin', 'as' => 'admin.'],function (){
     Route::resource('employees', EmployeeController::class);
+    Route::resource('customers',\App\Http\Controllers\Admin\CustomerController::class);
+    Route::resource('supplies',\App\Http\Controllers\Admin\SuppliesController::class);
+    Route::resource('categories',\App\Http\Controllers\Admin\CategoiesController::class);
+    Route::resource('units',\App\Http\Controllers\Admin\UnitsController::class);
+    Route::resource('orders',\App\Http\Controllers\Admin\OrdersController::class);
 });
 
 Auth::routes();

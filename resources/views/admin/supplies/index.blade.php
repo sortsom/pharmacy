@@ -19,7 +19,7 @@
                             <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Export PDF</a>
                             <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Export Excel</a>
                             <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Printed</a>
-                            <a href="{{route('/supplier')}}" class="btn btn-outline-primary float-right btn-sm ml-1">Add Supplies</a>
+                            <a href="{{route('admin.supplies.create')}}" class="btn btn-outline-primary float-right btn-sm ml-1">Add Supplies</a>
                             <div class="clearfix"></div>
                         </div>
                             <table class="table table-bordered">
@@ -33,12 +33,30 @@
 
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <td colspan="7" class="text-center">
-                                        No data to be displayed
-                                    </td>
-                                </tr>
+                                <tbody
+                                @forelse($supplies as $supply)
+                                    <tr>
+                                        <th scope="row">{{$supply->id}}</th>
+                                        <td>{{$supply->name}}</td>
+                                        <td>{{$supply->telephone}}</td>
+                                        <td>{{$supply->address}}</td>
+                                        <td class="d-flex">
+                                            <a class="ml-2 btn btn-outline-dark" href="{{route('admin.supplies.show',$supply->id) }}"><i class="far fa-eye"></i></a>
+                                            <a href="{{route('admin.supplies.edit',$supply->id)}}" class="ml-2 btn btn-outline-primary"><i class="fas fa-edit"></i></a>
+                                            <form method="POST" action="{{route('admin.supplies.destroy',$supply->id)}}" class="d-inline-flex">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="ml-2 btn btn-outline-danger"><i class="far fa-trash-alt"></i></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="6" class="text-center">
+                                            No data to be displayed
+                                        </td>
+                                    </tr>
+                                @endforelse
                                 </tbody>
                             </table>
                     </div>

@@ -57,13 +57,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{asset('/customer')}}" class="nav-link">
+                        <a href="{{route('admin.customers.create')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Add Customer</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('/customers')}}" class="nav-link">
+                        <a href="{{route('admin.customers.index')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Customer List</p>
                         </a>
@@ -96,13 +96,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{asset('supplier')}}" class="nav-link">
+                        <a href="{{route('admin.supplies.create')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>add Supplies</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('/suppliers')}}" class="nav-link">
+                        <a href="{{route('admin.supplies.index')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Supplies List</p>
                         </a>
@@ -122,37 +122,38 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{asset('/medicine')}}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Add Medicine</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Medicine List</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{asset('/category')}}" class="nav-link">
+                        <a href="{{route('admin.categories.create')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Add Category</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('/categories')}}" class="nav-link">
+                        <a href="{{route('admin.categories.index')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Category List</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('unit')}}" class="nav-link">
+                        <a href="#" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Add Product</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Product List</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{route('admin.units.create')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Add Unit</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('units')}}" class="nav-link">
+                        <a href="{{route('admin.units.index')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Unit List</p>
                         </a>
@@ -251,13 +252,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{asset('/order')}}" class="nav-link">
+                        <a href="{{route('admin.orders.create')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>add orders</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('/ordered')}}" class="nav-link">
+                        <a href="{{route('admin.orders.index')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Orders Details</p>
                         </a>

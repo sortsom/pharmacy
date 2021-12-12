@@ -55,14 +55,14 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="DateBirth">DateBirth</span>
                                                 </div>
-                                                <input type="date" name="dob" class="form-control" placeholder="DateBirth" aria-label="DateBirth" aria-describedby="basic-addon1">
+                                                <input type="date" name="dob" value="{{$employees->dob}}" class="form-control" placeholder="DateBirth" aria-label="DateBirth" aria-describedby="basic-addon1">
                                             </div>
                                         </div><div class="col-md-6">
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="hiredate">hiredate</span>
                                                 </div>
-                                                <input type="date" name="date_end" class="form-control" placeholder="hiredate" aria-label="hiredate" aria-describedby="basic-addon1">
+                                                <input type="date" name="date_in" value="{{$employees->date_in}}" class="form-control" placeholder="hiredate" aria-label="hiredate" aria-describedby="basic-addon1">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -130,5 +130,6 @@
                     </div><!-- /.row -->
                 </div></div><!-- /.container-fluid -->
         </div>
+    </div>
     </div>
 @endsection

@@ -16,10 +16,11 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="modal-footer">
+                                <a href="{{route('admin.categories.create')}}" class="btn btn-outline-primary">Add Category</a>
                                 <a href="#" class="btn btn-outline-info">Export PDF</a>
                                 <a href="#" class="btn btn-outline-info">Export Excel</a>
                                 <a href="#" class="btn btn-outline-info">Printed</a>
-                                <a href="{{asset('/customer')}}" class="btn btn-outline-primary">Add Category</a>
+
                             </div>
                             <table class="table table-bordered">
                                 <thead>
@@ -27,18 +28,39 @@
                                     <th scope="col">Category ID</th>
                                     <th scope="col">Category Name</th>
                                     <th scope="col">Description</th>
+                                    <th>action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @forelse($categories as $category)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <th>001</th>
-                                    <td>Chhang</td>
-                                    <td>M</td>
+                                    <th scope="row">{{$category->id}}</th>
+                                    <th>{{$category->name}}</th>
+                                    <td>{{$category->description}}</td>
+                                    <td class="d-flex">
+                                        <a class="ml-2 btn btn-outline-dark" href="{{route('admin.categories.show',$category->id) }}"><i class="far fa-eye"></i></a>
+                                        <a href="{{route('admin.categories.edit',$category->id)}}" class="ml-2 btn btn-outline-primary"><i class="fas fa-edit"></i></a>
+                                        <form method="POST" action="{{route('admin.categories.destroy',$category->id)}}" class="d-inline-flex">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="ml-2 btn btn-outline-danger"><i class="far fa-trash-alt"></i></button>
+                                        </form>
                                     </td>
                                 </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="6" class="text-center">
+                                            No data to be displayed
+                                        </td>
+                                    </tr>
+                                @endforelse
                                 </tbody>
                             </table>
+                            <div class="card-foot">
+                                <div class="d-flex justify-content-lg-end">
+                                    {{$categories->links('pagination::bootstrap-4')}}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

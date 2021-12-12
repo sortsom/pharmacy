@@ -9,7 +9,6 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class EmployeeController extends Controller
 {
@@ -64,7 +63,7 @@ class EmployeeController extends Controller
      * Display the specified resource.
      *
      * @param int $id
-     * @return void
+     * @return Application|Factory|View
      */
     public function show(int $id)
     {
@@ -93,12 +92,12 @@ class EmployeeController extends Controller
      * @param int $id
      * @return RedirectResponse
      */
-    public function update(Request $request,$id): RedirectResponse
+    public function update(Request $request, int $id): RedirectResponse
     {
         $data = [
             'name' => $request->name,
             'gender' => $request->gender,
-            'date_start' => $request->date_start,
+            'date_in' => $request->date_in,
         ];
         if ($request->file('image')) {
             $imageName = time() . '.' . $request->image->extension();
@@ -113,10 +112,10 @@ class EmployeeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return Response
+     * @param int $id
+     * @return RedirectResponse
      */
-    public function destroy($id)
+    public function destroy(int $id): RedirectResponse
     {
        $employees=Employee::findOrFail($id);
        $employees->Delete();

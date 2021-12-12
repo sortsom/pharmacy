@@ -16,13 +16,15 @@
                     <div class="card">
                         <div class="card-head py-2">
                             <div class="container p-5">
+                                <form action="{{route('admin.categories.index')}}" method="POST" enctype="multipart/form-data">
+                                    @csrf
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon1">Name</span>
                                             </div>
-                                            <input type="text" class="form-control" placeholder="category name" aria-label="category name" aria-describedby="basic-addon1">
+                                            <input type="text" name="name" class="form-control" placeholder="category name" aria-label="category name" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -30,17 +32,18 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon1">Descriptions</span>
                                             </div>
-                                            <input type="text" class="form-control" placeholder="description" aria-label="description" aria-describedby="basic-addon1">
+                                            <input type="text" name="description" class="form-control" placeholder="description" aria-label="description" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
 
                                 </div>
-                            </div>
+
                             <div class="modal-footer">
                                 <a href="#" class="btn btn-secondary">Back</a>
-                                <a href="{{asset('/categories')}}" class="btn btn-outline-primary">Add</a>
-                                {{--<button type="submit" class="btn btn-primary">Save Add</button>--}}
+                                <button type="submit" class="btn btn-primary">Save Add</button>
                             </div>
+                            </form>
+                        </div>
                         </div>
                     </div>
                 </div>
