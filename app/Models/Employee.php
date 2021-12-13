@@ -12,5 +12,8 @@ class Employee extends Model
 {
     use HasFactory;
     protected  $fillable=['name','gender','dob','idcard','date_in','graduate','position','salary','phone','address','image'];
-
+    public function orders(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Order::class);
+    }
 }

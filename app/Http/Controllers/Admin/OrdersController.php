@@ -37,16 +37,16 @@ class OrdersController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @return Order[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
         Order::create([
             'date_in'=>$request->date_in,
-            'category_id'=>$request->category_id,
+            'employee_id'=>$request->employee_id,
             'supply_id'=>$request->supply_id,
         ]);
-        return redirect()->route('admin.orders.index');
+        return Order::all();
     }
 
     /**

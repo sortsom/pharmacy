@@ -4,17 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Order extends Model
 {
     use HasFactory;
     protected  $fillable=['date_in'];
-    public function category(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+
+    public function employee(): BelongsTo
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Employee::class,'employee_id');
     }
-    public function supply(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function supply(): BelongsTo
     {
-        return $this->belongsTo(Supply::class);
+        return $this->belongsTo(Supply::class,'supply_id');
     }
 }
