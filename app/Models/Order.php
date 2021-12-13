@@ -13,10 +13,10 @@ class Order extends Model
 
     public function employee(): BelongsTo
     {
-        return $this->belongsTo(Employee::class,'employee_id');
+        return $this->belongsTo(Employee::class);
     }
     public function supply(): BelongsTo
     {
-        return $this->belongsTo(Supply::class,'supply_id');
+        return $this->belongsTo(Supply::class);
     }
 }

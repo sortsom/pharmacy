@@ -39,9 +39,9 @@
                                             </div>
                                             <select class="custom-select" id="supply_id">
                                                 <option selected>---Select Supply---</option>
-                                                @foreach($supplies as $supply)
-                                                <option value="{{$supply->id}}">{{$supply->name}}</option>
-                                                @endforeach
+{{--                                                @foreach($supplies as $supply)--}}
+{{--                                                <option value="{{$supply->id}}">{{$supply->name}}</option>--}}
+{{--                                                @endforeach--}}
                                             </select>
                                         </div>
                                     </div>
