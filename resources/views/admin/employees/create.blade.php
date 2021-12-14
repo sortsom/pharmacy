@@ -128,7 +128,8 @@
                     </div>
                 </div>
             </div><!-- /.row -->
-        </div></div><!-- /.container-fluid -->
+                </div></div><!-- /.container-fluid -->
+
     </div>
     </div>
 @endsection

@@ -27,7 +27,7 @@
                                 <tr>
                                     <th scope="col">Supplies ID</th>
                                     <th scope="col">Company Name</th>
-                                    <th scope="email">Email</th>
+                                    <th scope="col">Email</th>
                                     <th scope="col">Phone</th>
                                     <th scope="col">Address</th>
 
@@ -41,8 +41,8 @@
                                         <td>{{$supply->telephone}}</td>
                                         <td>{{$supply->address}}</td>
                                         <td class="d-flex">
-                                            <a class="ml-2 btn btn-outline-dark" href="{{route('admin.supplies.show',$supply->id) }}"><i class="far fa-eye"></i></a>
-                                            <a href="{{route('admin.supplies.edit',$supply->id)}}" class="ml-2 btn btn-outline-primary"><i class="fas fa-edit"></i></a>
+                                            <a class="ml-2 btn btn-outline-dark" href="" data-toggle="modal" data-target="#supplyshow"><i class="far fa-eye"></i></a>
+                                            <a href="" class="ml-2 btn btn-outline-primary" data-toggle="modal" data-target="#supplyedit"><i class="fas fa-edit"></i></a>
                                             <form method="POST" action="{{route('admin.supplies.destroy',$supply->id)}}" class="d-inline-flex">
                                                 @csrf
                                                 @method('DELETE')
@@ -50,6 +50,139 @@
                                             </form>
                                         </td>
                                     </tr>
+{{-- Supplies show --}}
+                                <!-- Modal -->
+                                    <div class="modal fade" id="supplyshow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-xl" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container-fluid mt-4">
+                                                        <div class="card">
+                                                            <div class="card-head py-2">
+                                                                <div class="container p-5">
+                                                                    <form action="{{route('admin.supplies.store')}}" method="POST" enctype="multipart/form-data">
+                                                                        @csrf
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <div class="input-group mb-3">
+                                                                                    <div class="input-group-prepend">
+                                                                                        <span class="input-group-text" id="basic-addon1">CompanyName</span>
+                                                                                    </div>
+                                                                                    <input type="text" class="form-control" name="name" placeholder="Username" aria-label="Customer Name" aria-describedby="basic-addon1">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-md-6">
+                                                                                <div class="input-group mb-3">
+                                                                                    <div class="input-group-prepend">
+                                                                                        <span class="input-group-text" id="basic-addon1">Phone</span>
+                                                                                    </div>
+                                                                                    <input type="number" name="telephone" class="form-control" placeholder="Phone Number" aria-label="Input Phone Number" aria-describedby="basic-addon1">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="input-group mb-3">
+                                                                                    <div class="input-group-prepend">
+                                                                                        <span class="input-group-text" id="basic-addon1">Email</span>
+                                                                                    </div>
+                                                                                    <input type="text" name="email" class="form-control" placeholder="Supplier Email" aria-label="Email" aria-describedby="basic-addon1">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="input-group mb-3">
+                                                                                    <div class="input-group-prepend">
+                                                                                        <span class="input-group-text" id="basic-addon1">Address</span>
+                                                                                    </div>
+                                                                                    <input type="text" name="address" class="form-control" placeholder="Customer Address" aria-label="Username" aria-describedby="basic-addon1">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <a href="#" class="btn btn-secondary">Back</a>
+                                                                            <button type="submit" class="btn btn-primary">Save Add</button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+{{--edit supply--}}
+                                <!-- Modal -->
+                                    <div class="modal fade" id="supplyedit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-xl" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container-fluid mt-4">
+                                                        <div class="card">
+                                                            <div class="card-head py-2">
+                                                                <div class="container p-5">
+                                                                    <form action="{{route('admin.supplies.store')}}" method="POST" enctype="multipart/form-data">
+                                                                        @csrf
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <div class="input-group mb-3">
+                                                                                    <div class="input-group-prepend">
+                                                                                        <span class="input-group-text" id="basic-addon1">CompanyName</span>
+                                                                                    </div>
+                                                                                    <input type="text" class="form-control" name="name" placeholder="Username" aria-label="Customer Name" aria-describedby="basic-addon1">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-md-6">
+                                                                                <div class="input-group mb-3">
+                                                                                    <div class="input-group-prepend">
+                                                                                        <span class="input-group-text" id="basic-addon1">Phone</span>
+                                                                                    </div>
+                                                                                    <input type="number" name="telephone" class="form-control" placeholder="Phone Number" aria-label="Input Phone Number" aria-describedby="basic-addon1">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="input-group mb-3">
+                                                                                    <div class="input-group-prepend">
+                                                                                        <span class="input-group-text" id="basic-addon1">Email</span>
+                                                                                    </div>
+                                                                                    <input type="text" name="email" class="form-control" placeholder="Supplier Email" aria-label="Email" aria-describedby="basic-addon1">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="input-group mb-3">
+                                                                                    <div class="input-group-prepend">
+                                                                                        <span class="input-group-text" id="basic-addon1">Address</span>
+                                                                                    </div>
+                                                                                    <input type="text" name="address" class="form-control" placeholder="Customer Address" aria-label="Username" aria-describedby="basic-addon1">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <a href="#" class="btn btn-secondary">Back</a>
+                                                                            <button type="submit" class="btn btn-primary">Save Add</button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 @empty
                                     <tr>
                                         <td colspan="6" class="text-center">
@@ -57,11 +190,12 @@
                                         </td>
                                     </tr>
                                 @endforelse
-                                </tbody>
+                                <tbody>
                             </table>
                     </div>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
+
 @endsection

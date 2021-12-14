@@ -98,6 +98,13 @@ class EmployeeController extends Controller
             'name' => $request->name,
             'gender' => $request->gender,
             'date_in' => $request->date_in,
+            'position'=>$request->position,
+            'dob'=>$request->dob,
+            'idcard'=>$request->idcard,
+            'graduate'=>$request->graduate,
+            'salary'=>$request->salary,
+            'phone'=>$request->phone,
+            'address'=>$request->address,
         ];
         if ($request->file('image')) {
             $imageName = time() . '.' . $request->image->extension();
