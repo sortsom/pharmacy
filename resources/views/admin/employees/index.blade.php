@@ -83,9 +83,8 @@
                                                         <div class="card">
                                                             <div class="card-head py-2">
                                                                 <div class="container p-5">
-                                                                    <form action="{{route('admin.employees.update',$employee->id)}}" method="POST" enctype="multipart/form-data">
+                                                                    <form action="{{route('admin.employees.index',$employee->id)}}" method="POST" enctype="multipart/form-data">
                                                                         @csrf
-                                                                        @method('PUT')
                                                                         <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="input-group mb-3">
