@@ -59,8 +59,8 @@
                                         <td>{{$employee->phone}}</td>
                                         <td>{{$employee->address}}</td>
                                         <td class="d-flex">
-                                            <a class="ml-2 btn btn-outline-dark"data-toggle="modal" data-target="#employeeshow"  href=""><i class="far fa-eye"></i></a>
-                                            <a href="" data-toggle="modal" data-target="#employeeId" class="ml-2 btn btn-outline-primary"><i class="fas fa-edit"></i></a>
+                                            <a class="ml-2 btn btn-outline-dark"data-toggle="modal" data-target="#show-{{$employee->id}}"  href="#"><i class="far fa-eye"></i></a>
+                                            <a href="#" data-toggle="modal" data-target="#edit-{{$employee->id}}" class="ml-2 btn btn-outline-primary"><i class="fas fa-edit"></i></a>
                                             <form method="POST" action="{{route('admin.employees.destroy',$employee->id)}}" class="d-inline-flex">
                                                 @csrf
                                                 @method('DELETE')
@@ -69,7 +69,7 @@
                                         </td>
                                     </tr>
                                     {{--    edit empoyees--}}
-                                    <div class="modal fade" id="employeeId" tabindex="-1" role="dialog" aria-labelledby="employeeId" aria-hidden="true">
+                                    <div class="modal fade" id="edit-{{$employee->id}}" tabindex="-1" role="dialog" aria-labelledby="employeeId" aria-hidden="true">
                                         <div class="modal-dialog modal-xl" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -83,8 +83,9 @@
                                                         <div class="card">
                                                             <div class="card-head py-2">
                                                                 <div class="container p-5">
-                                                                    <form action="{{route('admin.employees.index',$employee->id)}}" method="POST" enctype="multipart/form-data">
+                                                                    <form action="{{route('admin.employees.update',$employee->id)}}" method="POST" enctype="multipart/form-data">
                                                                         @csrf
+                                                                        @method('PUT')
                                                                         <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="input-group mb-3">
@@ -204,8 +205,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{--    show empoyees--}}
-                                    <div class="modal fade" id="employeeshow" tabindex="-1" role="dialog" aria-labelledby="employeeId" aria-hidden="true">
+{{--    show empoyees--}}
+                                    <div class="modal fade" id="show-{{$employee->id}}" tabindex="-1" role="dialog" aria-labelledby="employeeshow" aria-hidden="true">
                                         <div class="modal-dialog modal-xl" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -490,3 +491,4 @@
         </div>
     </div>
 @endsection
+

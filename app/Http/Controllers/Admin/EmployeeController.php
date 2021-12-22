@@ -62,13 +62,13 @@ class EmployeeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int $id
+     *
      * @return Application|Factory|View
      */
-    public function show(int $id)
+    public function show( $id)
     {
     $employees =Employee::findOrFail($id);
-    return view('admin.employees.show', ['employees' => $employees]);
+    return view('admin.employees.index', ['employees' => $employees]);
 
     }
 
@@ -76,12 +76,11 @@ class EmployeeController extends Controller
      * Show the form for editing the specified resource.
      *
 
-     * @return Application|Factory|View
+     * @return RedirectResponse
      */
     public function edit($id)
     {
-        $employees=Employee::findOrFail($id);
-        return view('admin.employees.edit', ['employees' => $employees]);
+        return Employee::findOrFail($id);
 
     }
 
