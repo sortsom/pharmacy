@@ -20,7 +20,7 @@
                                 <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Export PDF</a>
                                 <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Export Excel</a>
                                 <a href="#" class="btn btn-outline-info float-right btn-sm ml-1">Printed</a>
-                                <a href=""data-toggle="modal" data-target="#addemployee" class="btn btn-outline-primary float-right btn-sm ml-1">Add Employee</a>
+                                <a href="" data-toggle="modal" data-target="#add" class="btn btn-outline-primary float-right btn-sm ml-1">Add Employee</a>
                                 <div class="clearfix"></div>
                             </div>
                                 <table class="table table-bordered">
@@ -359,7 +359,7 @@
     </div>
 {{--add employee--}}
     <!-- Modal -->
-    <div class="modal fade" id="addemployee" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
